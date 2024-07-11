@@ -1,11 +1,8 @@
 class Solution:
     def isSubsequence(self, s: str, t: str) -> bool:
-        if s == "" and not t == "":
+        if s == "":
             return True  
-        if s == "" and t == "":
-            return True 
-        if not s == "" and t == "":
-            return False        
+               
 
         l = 0
         r = len(s)-1
