@@ -1,15 +1,18 @@
 class Solution:
     def removeDuplicates(self, nums: List[int]) -> int:
-        unique_set = set()
-        index = 0
-
-        while index < len(nums):
-            if nums[index] not in unique_set:
-                unique_set.add(nums[index])
-                index += 1
+        if not nums:
+            return []
+        i = 0
+        while i < len(nums) -1:
+            if nums[i] == nums[i+1]:
+                nums.pop(i)
             else:
-                nums.pop(index)
+                i += 1
 
-        return len(nums)
+        
 
-                
+
+        
+            
+             
+            
